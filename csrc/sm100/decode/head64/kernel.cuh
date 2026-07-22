@@ -113,7 +113,8 @@ KernelTemplate<MODEL_TYPE>
             };
 
             f(args);
-            NamedBarrier(NUM_THREADS, NamedBarriers::everyone_sync).arrive_and_wait_unaligned();
+            // ZKK: seems useless
+            // NamedBarrier(NUM_THREADS, NamedBarriers::everyone_sync).arrive_and_wait_unaligned();
         }
     };
 
